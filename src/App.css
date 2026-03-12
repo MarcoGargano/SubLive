@@ -27,11 +27,11 @@
   display: none;
 }
 
-/* Idle state: left-aligned at top */
+/* Idle state: centered to fill screen */
 .text-area-centered {
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
 }
 
 .text-area-spacer {
