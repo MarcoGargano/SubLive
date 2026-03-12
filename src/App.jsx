@@ -13,6 +13,8 @@ function App() {
   const textAreaRef = useRef(null)
   const isListeningRef = useRef(false)
 
+  const lastFinalRef = useRef('')
+
   // Initialize SpeechRecognition ONCE on mount.
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -27,19 +29,27 @@ function App() {
     recognition.lang = 'it-IT';
 
     recognition.onresult = (event) => {
-      let final = '';
-      let interim = '';
+      let currentFinal = '';
+      let currentInterim = '';
+
       for (let i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
-          final += event.results[i][0].transcript;
+          currentFinal += event.results[i][0].transcript;
         } else {
-          interim += event.results[i][0].transcript;
+          currentInterim += event.results[i][0].transcript;
         }
       }
-      if (final) {
-        setTranscript((prev) => prev + final + ' ');
+
+      if (currentFinal) {
+        const trimmed = currentFinal.trim();
+        // Trucco del "Buffer di Confronto": se la stringa finale è identica
+        // all'ultima che abbiamo accodato, ignoriamola
+        if (trimmed && trimmed !== lastFinalRef.current) {
+          lastFinalRef.current = trimmed;
+          setTranscript((prev) => prev + currentFinal + ' ');
+        }
       }
-      setInterimTranscript(interim);
+      setInterimTranscript(currentInterim);
     };
 
     recognition.onerror = (event) => {
@@ -81,6 +91,7 @@ function App() {
       setTranscript('');
       setInterimTranscript('');
       setSessionStarted(true);
+      lastFinalRef.current = ''; // Reset buffer all'avvio
       try {
         recognitionRef.current?.start();
         isListeningRef.current = true;

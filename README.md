@@ -1,16 +1,77 @@
-# React + Vite
+# 🎙️ SubLive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **La tua voce, i tuoi sottotitoli. In tempo reale.**
 
-Currently, two official plugins are available:
+**SubLive** è una web app minimale, elegante e ultra-veloce che trasforma istantaneamente tutto ciò che dici in testo grande, leggibile e scaricabile. Pensata per il mobile, perfetta ovunque.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 **[Provala subito online!](https://marcogargano.github.io/SubLive/)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Perché usare SubLive?
 
-## Expanding the ESLint configuration
+Che tu sia un content creator, un insegnante o semplicemente abbia bisogno di prendere appunti senza usare le mani, SubLive è lo strumento definitivo per la trascrizione live.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🚀 **Zero click, zero distrazioni:** Tocca lo schermo una volta e inizia a parlare. Nessun menu complesso.
+- 📱 **Mobile-First & UI Immersiva:** Testi enormi che si adattano perfettamente allo schermo del tuo smartphone, leggibili anche a distanza.
+- 🌙 **Dark Mode nativa:** Un design nero assoluto (`#0a0a0a`) che salva la batteria (sugli schermi OLED) e non affatica la vista.
+- 💾 **Esportazione in 1 secondo:** Finito di parlare? Clicca su "Scarica .txt" e salva la tua trascrizione al volo.
+- 🔋 **Always On:** Grazie alla *Screen Wake Lock API*, lo schermo del tuo telefono non si spegnerà mai mentre stai parlando!
+
+---
+
+## 🛠️ Casi d'uso pratici
+
+### 🎥 Per Content Creator (Video & Streaming)
+Metti il telefono sotto la videocamera con SubLive aperto. Mentre parli, avrai un teleprompter/trascrizione dal vivo per controllare di non esserti perso nulla. A fine video, scarichi il TXT e hai già la base per i sottotitoli di YouTube o Instagram!
+
+### 🎓 Per Insegnanti e Studenti
+Sei a lezione? Avvia SubLive, appoggia il telefono sulla cattedra o sul banco e lascia che ascolti. A fine ora avrai gli appunti testuali completi pronti da scaricare e rielaborare.
+
+### 🎤 Eventi Live e Conferenze
+Stai parlando a un pubblico e vuoi garantire l'accessibilità? Collega un tablet a un proiettore con SubLive a tutto schermo. Il pubblico leggerà in tempo reale quello che dici.
+
+### 📝 Brainstorming in movimento
+Sei in macchina o a fare una passeggiata e ti viene un'idea brillante? Tocca lo schermo e inizia a pensare ad alta voce. Il tuo flusso di coscienza diventerà un documento di testo organizzato.
+
+---
+
+## 💻 Come installare e avviare in locale
+
+SubLive è costruito con **React + Vite** per prestazioni fulminee.
+
+1. **Clona il repository:**
+   ```bash
+   git clone https://github.com/MarcoGargano/SubLive.git
+   cd SubLive
+   ```
+
+2. **Installa le dipendenze:**
+   ```bash
+   npm install
+   ```
+
+3. **Avvia il server di sviluppo:**
+   ```bash
+   npm run dev
+   ```
+   *Tip: aggiungi `--host` per poterlo testare dal tuo smartphone connesso alla stessa rete WiFi!*
+
+4. **Build e Deploy:**
+   ```bash
+   npm run deploy
+   ```
+   *(Questo costruirà la cartella `dist/` e la pubblicherà automaticamente sulla tua GitHub Page).*
+
+---
+
+## 🧩 Tecnologie utilizzate
+
+- **React 19**
+- **Vite**
+- **Web Speech API** (per il motore di riconoscimento vocale)
+- **Screen Wake Lock API** (per mantenere lo schermo attivo)
+- **CSS3** puro con font *Barlow Condensed* (Google Fonts)
+
+---
+*Creato con passione per rendere la voce visibile. 🖤*
