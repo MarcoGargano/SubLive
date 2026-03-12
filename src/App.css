@@ -55,15 +55,16 @@
 
 .app-title {
   color: var(--text-active);
-  font-size: clamp(4rem, 18vw, 9rem);
+  font-size: 12rem;
   font-weight: 800;
   line-height: 0.8;
+  letter-spacing: -0.02em;
 }
 
 .placeholder-text {
   color: var(--text-secondary);
   text-align: left;
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: 3rem;
   font-weight: 500;
   line-height: 0.8;
 }
