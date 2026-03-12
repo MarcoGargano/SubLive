@@ -36,35 +36,6 @@ Sei in macchina o a fare una passeggiata e ti viene un'idea brillante? Tocca lo 
 
 ---
 
-## 💻 Come installare e avviare in locale
-
-SubLive è costruito con **React + Vite** per prestazioni fulminee.
-
-1. **Clona il repository:**
-   ```bash
-   git clone https://github.com/MarcoGargano/SubLive.git
-   cd SubLive
-   ```
-
-2. **Installa le dipendenze:**
-   ```bash
-   npm install
-   ```
-
-3. **Avvia il server di sviluppo:**
-   ```bash
-   npm run dev
-   ```
-   *Tip: aggiungi `--host` per poterlo testare dal tuo smartphone connesso alla stessa rete WiFi!*
-
-4. **Build e Deploy:**
-   ```bash
-   npm run deploy
-   ```
-   *(Questo costruirà la cartella `dist/` e la pubblicherà automaticamente sulla tua GitHub Page).*
-
----
-
 ## 🧩 Tecnologie utilizzate
 
 - **React 19**
